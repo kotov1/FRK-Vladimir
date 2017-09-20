@@ -8,9 +8,39 @@ $(function() {
 			$('#scroller').fadeOut();
 		}
 	});
+
 	$('#scroller').click(function () {
 		$('body,html').animate({scrollTop: 0}, 500);	//0 - margin-top; 300 - scrolling speed
 		 return false;
 		 });	
+
+
+	try {
+			$.browserSelector();
+			if($("html").hasClass("chrome")) {
+				$.smoothScroll();
+			}
+		} catch(err) {
+
+	};
+
+	// E-mail Ajax Send
+	$(".mail").submit(function() { 	//Change
+		var th = $(this);
+		$.ajax({
+			type: "POST",
+			url: "mail.php", 				//Change
+			data: th.serialize()
+		}).done(function() {
+			alert("Спасибо! Ваше сообщение отправлено!");
+			setTimeout(function() {
+				// Done Functions
+				$.magnificPopup.close();
+				th.trigger("reset");
+			}, 1000);
+		});
+		return false;
+	});
+
 
 });

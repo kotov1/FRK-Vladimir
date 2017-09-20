@@ -49,6 +49,11 @@ body
 	overflow-x: hidden
 	opacity: 1
 
+section
+	padding-top: 50px
+	padding-bottom: 50px  
+
+
 .img-responsive
 	display: block
 	max-width: 100%
@@ -134,8 +139,8 @@ header
 	background-size: 150%
 	background-attachment: fixed 
 
-.header__overlay
-	background-color: rgba(0,0,0,.2)
+.section__overlay
+	background-color: rgba(0,0,0,.1)
 	background-origin: padding-box
 	background-clip: padding-box
 		
@@ -148,7 +153,6 @@ header
 	h4
 		margin-top: 1.6em 
 		color: #fff
-		// font: bold 1.375em $default__font-heading
 		
 	a[href^="tel"]
 		color: #fff
@@ -159,7 +163,6 @@ header
 	h1
 		padding: .4em 1.1em
 		background-color: rgba(255,255,255,.9)
-		// font-size: 3em 
 		font-family: $default__font-heading
 		font-weight: bold
 		line-height: 1.4
@@ -171,11 +174,10 @@ header
 		margin-bottom: 0
 		padding: .68em 
 		padding-right: .3em
-		// font-size: 2.1em
 		font-family: $default__font-heading 
 		line-height: 1.4 
 		color: #FFF
-		background: linear-gradient(to right, rgb(1,137,255), rgba(1,137,255,.3))
+		background: linear-gradient(to right, rgb(1,137,255) 9%, rgba(1,137,255,.3))
 		&::after
 			content: ""
 			position: absolute
@@ -228,11 +230,11 @@ header
 #scroller
 	display: inline-block
 	position: fixed
-	left: 4%
+	right: 4%
 	bottom: 90px
 	width: 50px
 	height: 50px
-	box-shadow: 1px 1px 1px #E4EAEC 
+	box-shadow: 1px 1px 10px rgba(1,137,255,.5)
 	border-radius: 10px
 	font-size: .8125em
 	background-color: rgba(1,137,255,.8)
@@ -270,8 +272,7 @@ header
 // 	ADVANTAGES START
 // ===================================
 .advantages
-	padding: 20px 0
-	
+
 	.advantages__content
 		padding-top: 30px 
 		
@@ -320,14 +321,9 @@ header
 // 	GARANTY START
 // ===================================
 .garanty
-	padding-top: 15px 
-	padding-bottom: 15px 
-	// background-color: rgba(0,0,0,.15)
+
+
 	background-color: rgb(220,229,236)
-	
-	.garanty__img
-		// overflow: hidden
-		// border-radius: 50%  
 	
 	.garanty__content
 		h3
@@ -346,15 +342,18 @@ header
 // ===================================
 // 	CONSULTATION START
 // ===================================
-
 .consultation
-	padding-top: 50px 
-	padding-bottom: 50px 
 	background: url(../img/consult.jpg) no-repeat
 	background-position: 75% 5%
 	background-size: 120%
 	background-attachment: fixed 
-	color: rgba(0,0,0,.6) 
+	color: rgba(0,0,0,.6)
+	padding-top: 0
+	padding-bottom: 0
+	
+	.section__overlay
+		padding-top: 50px
+		padding-bottom: 50px  
 	
 	p
 		font-family:  $default__font-heading
@@ -402,13 +401,84 @@ header
 			font-size: .8em
 			line-height: 1.4
 			text-align: center
-			
-
-
-
-
 // ===================================
 // 	CONSULTATION END
+// ===================================
+
+// ===================================
+// 	RESULTS START
+// ===================================
+.results
+	padding-top: 50px
+	padding-bottom: 50px  
+	text-align: center
+	
+	h3
+		margin-top: 20px
+		margin-bottom: 0 
+
+.results__gallery
+	margin-top: 30px
+
+	.gallery_item
+		height: 250px 
+		position: relative
+		background-color: #FFF
+		background-repeat: no-repeat
+		background-size: cover
+		 
+		&:not(.gallery_item-families)
+			margin-bottom: 30px 
+
+	.gallery_item-families
+		min-height: 530px
+		background-image: url(../img/results-families-new2.jpg) 
+		
+		.gallery_text
+			padding: 11px 20px 
+			font-size: 1.8em 
+			
+	.gallery_item-experience
+		background-image: url(../img/results-exp-new.jpg)
+	.gallery_item-countries
+		background-image: url(../img/results-countries-new.jpg)
+	.gallery_item-cities
+		background-image: url(../img/results-cities-new.jpg)
+	.gallery_item-specialists
+		background-image: url(../img/results-spec-new.jpg)
+		background-size: 130% 100%
+			
+	.gallery_text
+		position: absolute
+		width: 50%
+		height: 50%
+		top: 50%
+		left: 50%
+		padding: 5px 9px 
+		border-radius: 50%
+		transform: translate(-50%, -70%)
+		font-family: $default__font-text 
+		font-size: 1em 
+		line-height: 1.2
+		color: #FFF
+		z-index: 2
+		background: linear-gradient(to right, rgba(1,137,255,.7), rgba(1,137,255,.4))
+		background-position: 133% 
+
+	
+	.stylized_number
+		font-family: 'Bighaustitul extrabold'
+		font-size: 2em 
+
+		
+
+
+
+
+
+			
+// ===================================
+// 	RESULTS END
 // ===================================
 
 
