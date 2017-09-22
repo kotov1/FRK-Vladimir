@@ -20,8 +20,8 @@ $(function() {
 		items: 1,
 		nav: true,
 		navText: '',
-		autoplay : false,
-		autoplayHoverPause : true,
+		autoplay : true,
+		autoplayHoverPause : false,
 		loop: true
 	});
 
