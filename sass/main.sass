@@ -73,24 +73,6 @@ section
 	&:active
 		transform: scale(.98)
 
-.btn__submit
-	padding: 15px 30px
-	font: 1.125em $default__font-text
-	color: #FFF
-	background: $accent
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7868D',endColorstr='#B31521',GradientType=0)
-	border: 1px solid #2196F3
-	border-radius: 3px
-	cursor: pointer
-	transition: transform .3s
-	
-	&:hover
-		transform: scale(1.02)
-	&:active
-		transform: scale(.98)
-
-input
-	font-family: $default__font-heading
 
 
 .center
@@ -117,12 +99,48 @@ h1
 	
 h2
 	font-size: 2.2rem
+	text-align: center
 
 h3
 	font-size: 1.7rem 
 
 h4
 	font-size: 1.4rem 
+
+
+
+form
+
+	input
+		width: 100%
+		padding: 10px 15px 
+		font-family: $default__font-heading
+		border: 1px solid $accent
+		border-radius: 4px;
+
+		outline: none
+		
+		+ span
+			font-size: .75em
+			color: rgba(0,0,0,.8)
+		
+	input[type="submit"]
+		padding: 11px 30px
+		font: 1.125em $default__font-text
+		color: #FFF
+		background: $accent
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#F7868D',endColorstr='#B31521',GradientType=0)
+		border: 1px solid #2196F3
+		border-radius: 3px
+		cursor: pointer
+		transition: transform .3s
+		
+		&:hover
+			transform: scale(1.02)
+		&:active
+			transform: scale(.98)
+
+
 
 // ===================================
 // STYLES 
@@ -132,7 +150,6 @@ h4
 // ===================================
 // HEADER BEGIN
 // ===================================
-
 header
 	background: #FFF url(../img/business-01.jpg) no-repeat
 	background-position: 35% 0%
@@ -177,6 +194,7 @@ header
 		font-family: $default__font-heading 
 		line-height: 1.4 
 		color: #FFF
+		text-align: left
 		background: linear-gradient(to right, rgb(1,137,255) 9%, rgba(1,137,255,.3))
 		&::after
 			content: ""
@@ -199,34 +217,31 @@ header
 		font: 1.375em $default__font-text
 
 .header__mail
-	input
-		width: 100%
-		outline: none
+	padding-top: 10px
+	padding-bottom: 25px  
 
 	input[type="text"], input[type="tel"]
-		height: 50px
+		// height: 50px
 		padding-left: 1em  
 		background-color: rgba(255, 255, 255, 1)
 		border: 1px solid rgba(227, 227, 227, .5)
-		border-radius: 3px;
+
 		color: rgb(145, 145, 145)
-		font-size: .9em
+
 		+ span
 			font-size: .75em
 			color: #fff
 		
-	input[type="submit"]
 
-	
 .svg_wrap
 	max-height: 125px
 	overflow: hidden 
-
 // ===================================
 // HEADER END
 // ===================================
 
-// Scroll button
+
+// Scroll button start
 #scroller
 	display: inline-block
 	position: fixed
@@ -250,23 +265,7 @@ header
 	
 	&:hover
 		transform: scale(1.05)
-	
-	// svg
-	// 	position: absolute
-	// 	left: 50%
-	// 	transform: translateX(-50%)
-	// 	width: 40%
-	// 	height: 40%
-	// 	margin: 15% auto 3%
-
-	// .scroller__text
-	// 	position: absolute
-	// 	bottom: 15%
-	// 	left: 50%
-	// 	transform: translateX(-50%)
-	// 	font-weight: bold
-
-
+// Scroll button end
 
 // ===================================
 // 	ADVANTAGES START
@@ -322,7 +321,6 @@ header
 // ===================================
 .garanty
 
-
 	background-color: rgb(220,229,236)
 	
 	.garanty__content
@@ -364,18 +362,18 @@ header
 		font-size: 1.6rem
 		line-height: 1.2
 	
-.form__consult
+.consult__mail
 	margin-top: 25px 
 	padding: 5px
 	background: #FFF
 	border-radius: 5px
 	
-	.form__consult-wrap
+	.consult__mail-wrap
 		padding: 20px 25px 10px
 		border: 1px solid $accent
 		border-radius: 5px
 	
-	.form__consult-head
+	.consult__mail-head
 		line-height: 1.2
 		p
 			font-size: 1.2rem
@@ -387,13 +385,11 @@ header
 		display: block
 		width: 100%
 		margin-top: 10px 
-		padding: 10px 15px 
-		border: 1px solid $accent
-		border-radius: 4px
-		outline: none  
+		
 		+ span
 			font-size: .75em
 			color: rgba(0,0,0,.8)
+			
 	input[type="submit"]
 		+ span
 			display: block
@@ -421,7 +417,8 @@ header
 	margin-top: 30px
 
 	.gallery_item
-		height: 250px 
+		height: 250px
+		width: auto
 		position: relative
 		background-color: #FFF
 		background-repeat: no-repeat
@@ -431,7 +428,8 @@ header
 			margin-bottom: 30px 
 
 	.gallery_item-families
-		min-height: 530px
+		height: 530px
+		width: auto
 		background-image: url(../img/results-families-new2.jpg) 
 		
 		.gallery_text
@@ -469,17 +467,145 @@ header
 	.stylized_number
 		font-family: 'Bighaustitul extrabold'
 		font-size: 2em 
-
-		
-
-
-
-
-
-			
 // ===================================
 // 	RESULTS END
 // ===================================
+
+// ===================================
+// PAY FOR RESULT START
+// =================================== 
+.payForResult
+	// background-color: rgba(1,137,255,.2) 
+	background-color: rgba(1,137,255,.1)
+	// background-color: #dce5ec
+	// background: linear-gradient(to right, rgba(1,137,255,.7), rgba(1,137,255,.2))
+
+	h2
+		margin-bottom: 50px 
+	h3
+		text-align: center
+
+.payForResult__item
+
+	.svg_wrap
+		height: 96px
+		width: 100% 
+		
+	p
+		position: relative
+		margin-top: 30px
+		padding: 15px  
+		text-align: center
+		font-weight: bold
+
+		&::before
+			content: ''
+			width: 50%
+			height: 2px
+			background-color: #000 
+			display: inline-block
+			position: absolute
+			left: 50%
+			top: 0
+			transform: translateX(-50%) 
+			
+
+// ===================================
+// 	TRUSTSALES START
+// ===================================
+.trustSales
+
+.trustSales__mail
+	margin-top: 30px 
+
+	.submit-wrap
+		position: relative
+		
+	input[type="submit"]
+		position: relative
+		
+	.submit-placeholder
+		width: 100%
+		position: absolute
+		top: 0
+		padding: 11px 5px
+		font: 1.125em $default__font-text
+		color: #FFF
+		text-align: center
+		line-height: 1.125em 
+// ===================================
+// 	TRUSTSALES END
+// ===================================
+
+.comments
+	h2
+		margin-bottom: 30px 
+
+.owl-carousel
+	.img-wrap
+		width: 150px 
+		margin: 15px auto
+
+	.owl-nav 
+		> div
+			width: 32px
+			height: 32px
+			position: absolute
+			top: 16%
+			background: url('../img/slider_arrows.png') no-repeat 50%
+			opacity: 1
+		.owl-prev
+			left: 0
+			background-position: 9px 0
+		.owl-next
+			right: 0
+			background-position: -24px 0
+			
+	.owl-dots
+		text-align: center
+		.owl-dot
+			display: inline-block
+			margin-left: 5px 
+			width: 10px
+			height: 10px
+			border-radius: 50%  
+			background-color: rgba(1,137,255,.3)
+			&:hover
+				background-color: rgba(1,137,255,.9)
+			&.active
+				background-color: rgba(1,137,255,.9)
+
+	.owl-item
+		.slide
+			text-align: center
+			padding: 0 100px 
+			
+			.img-wrap
+				opacity: 0
+				transform: translate3d(200px, 0, 0)
+			h4
+				opacity: 0
+				transform: translate3d(200px, 0, 0)
+			p
+				opacity: 0
+				transform: translate3d(200px, 0, 0)
+			
+		&.active
+			.slide
+				.img-wrap
+					opacity: 1
+					transform: translate3d(0, 0, 0)
+					transition: all .7s ease .2s
+				h4
+					opacity: 1
+					transform: translate3d(0, 0, 0)
+					transition: all .7s ease .4s
+				p
+					opacity: 1
+					transform: translate3d(0, 0, 0)
+					transition: all .7s ease .7s
+
+
 
 
 

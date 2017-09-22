@@ -1,0 +1,22 @@
+{
+  "name": "prodaga-kvartir",
+  "homepage": "https://github.com/kotov1/FRK-Vladimir",
+  "authors": [
+    "Petr Petukhov <kotov0991@gmail.com>"
+  ],
+  "description": "work project",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/libs/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "owl.carousel": "^2.2.1"
+  }
+}

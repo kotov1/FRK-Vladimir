@@ -13,16 +13,23 @@ $(function() {
 		$('body,html').animate({scrollTop: 0}, 500);	//0 - margin-top; 300 - scrolling speed
 		 return false;
 		 });	
+	// ------------------------------------------
+
+		//Карусель в блоке comments
+	$(".owl-carousel").owlCarousel({
+		items: 1,
+		nav: true,
+		navText: '',
+		autoplay : false,
+		autoplayHoverPause : true,
+		loop: true
+	});
 
 
-	try {
-			$.browserSelector();
-			if($("html").hasClass("chrome")) {
-				$.smoothScroll();
-			}
-		} catch(err) {
 
-	};
+
+
+
 
 	// E-mail Ajax Send
 	$(".mail").submit(function() { 	//Change

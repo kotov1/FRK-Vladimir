@@ -33,9 +33,9 @@
 		svg
 			display: none
 			
-	.header__mail
-		input[type="submit"]
-			margin-top: 20px 
+	
+	input[type="submit"]
+		margin-top: 20px 
 
 
 	.advantages
@@ -66,7 +66,7 @@
 		
 	.results__gallery
 		.gallery_text
-			width: 60%
+			width: 50%
 			height: 50%
 			padding: 15px 16px
 			
@@ -74,6 +74,19 @@
 		 	.gallery_text
 		 		padding: 11px 35px
 
+
+	.payForResult
+		padding-top: 30px 
+		h3
+			padding-top: 30px
+
+
+	.trustSales
+		.input-wrap //because of positioning of custom placeholder
+			margin-top: 20px
+		
+		input[type="submit"]
+			margin-top: 0
 
 
 	/**/
@@ -97,7 +110,7 @@
 		p
 			font-size: 1.3em 
 
-	.header__mail
+	.header__mail, .trustSales__mail
 		max-width: 75%
 		margin: 0 auto 
 
@@ -136,21 +149,20 @@
 		 		padding: 10px 36px
 
 
+	.trustSales
+		h2
+			margin-bottom: 20px
+			font-size: 2em
+			line-height: 1.4  
 
-
-
-
-
-
-
-
-
+		.submit-wrap
+			margin-top: 15px 
 
 	/**/
 
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px)
+@media only screen and (max-width : 767px)
 
 	.header__content	
 		h1
@@ -162,6 +174,7 @@
 		h2
 			margin-top: 2rem
 			font-size: 1.4em
+			background: linear-gradient(to right, rgb(1,137,255) 15%, rgba(1,137,255,.3))
 			&::after
 				bottom: -59px 
 			
@@ -196,10 +209,20 @@
 		 	.gallery_text
 		 		padding: 10px 36px
 
+	
+	.payForResult
+		h2
+			font-size: 1.7em 
+		h3
+			padding-top: 30px
+			font-size: 1.4em  
+			
 
-
-
-
+	.trustSales
+		h2
+			margin-bottom: 40px 
+			font-size: 1.7em
+			line-height: 1.4  
 
 
 	/**/
@@ -223,7 +246,7 @@
 				padding: 25px
 				
 		.gallery_item-families
-			min-height: 250px
+			height: 250px
 			background-size: 125% 130%
 			
 			.gallery_text
@@ -234,18 +257,14 @@
 			background-size: 100% 
 
 	
+	.trustSales__mail
 
+		input[type="submit"]
+			height: 60px 
 
-
-
-
-
-
-
-
-
-
-
+		.submit-placeholder
+			padding: 0
+			line-height: 60px
 
 /**/
 
@@ -268,7 +287,9 @@
 			
 		h2
 			font-size: 1.3rem
-			text-align: center
+			text-align: left
+			padding-left: 15% 
+			background: linear-gradient(to right, rgb(1,137,255) 22%, rgba(1,137,255,.3))
 			
 	.advantages
 		h2
@@ -290,20 +311,31 @@
 			max-width: 100%
 		
 			.gallery_text
-				width: 37%
-				height: 57%	 
-				padding: 20px 15px
+				width: 45%
+				height: 55%	 
+				padding: 20px 26px
 				// font-size: .8em
 				// padding: 25px
 				
 		.gallery_item-families
-			// background-size: 125% 130%
+			background-size: 125% 130%
 			
 			.gallery_text
-				// font-size: .8em
-				// padding: 5px 25px
+				font-size: .8em
+				padding: 5px 25px
 
 
+	.payForResult
+		h3
+			text-align: left
+			padding-left: 12% 
+	.trustSales
+		h2
+			font-size: 1.5em
+			line-height: 1.3
+			text-align: left
+			padding-left: 12% 
+			
 
 
 	/**/
