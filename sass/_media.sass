@@ -6,8 +6,8 @@
 @media only screen and (max-width : 1200px)
 
 	header
-		background-position: 35% 0%
-
+		background-size: cover
+		
 	.header__overlay
 		padding-bottom: 30px 
 		
@@ -97,11 +97,27 @@
 
 
 
+	.steps
+		.step-1, .step-3, .step-5, .step-7
+			margin-left: 0 
+			.step-text
+				&::before
+					right: -92px
+		.step-2, .step-4, .step-6
+			.step-text
+				&::before
+					left: -104px
+
+
 	/**/
 
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width : 992px)
+	
+	header
+		background-position: 43% 0%
+
 
 	.header__content
 		h1
@@ -144,6 +160,12 @@
 					white-space: normal
 
 
+	.consultation
+		background-position: 50% 5% 
+		background-size: cover 
+
+
+
 	.results__gallery-rightbar
 		margin-top: 30px 
 		
@@ -173,6 +195,31 @@
 			.slide
 				padding: 0 0px 
 	
+
+
+	.steps
+		.step-1, .step-3, .step-5, .step-7
+			margin-left: 0 
+			.step-text
+				&::before
+					right: -72px
+		.step-2, .step-4, .step-6
+			.step-text
+				&::before
+					left: -84px
+
+
+
+
+
+
+
+
+
+
+
+
+
 	/**/
 
 
@@ -238,6 +285,32 @@
 			margin-bottom: 40px 
 			font-size: 1.7em
 			line-height: 1.4  
+			
+
+
+	.steps
+		.step
+			margin-top: 50px 
+			.step-text
+				padding: 0
+				&::before
+					width: 35px
+					right: -58px
+					
+		.step-1, .step-3, .step-5, .step-7
+			margin-left: 0 
+				
+		.step-2, .step-4, .step-6
+			margin-left: 0 
+			.step-text
+				&::before
+					left: auto
+					padding: 0
+		.middle-line
+			width: 3px
+			&::after
+				top: 53% 
+
 
 
 	/**/
@@ -246,7 +319,9 @@
 
 
 @media only screen and (max-width : 576px)
-
+	header
+		background-position: 68% 0%
+		
 	.results__gallery
 		font-size: 1.25em 
 		
@@ -305,7 +380,11 @@
 			text-align: left
 			padding-left: 15% 
 			background: linear-gradient(to right, rgb(1,137,255) 22%, rgba(1,137,255,.3))
-			
+		
+	.header__mail, .trustSales__mail
+		max-width: 100%
+
+
 	.advantages
 		h2
 			font-size: 2rem
@@ -340,10 +419,14 @@
 				padding: 5px 25px
 
 
+
 	.payForResult
 		h3
 			text-align: left
 			padding-left: 12% 
+			
+
+
 	.trustSales
 		h2
 			font-size: 1.5em
@@ -351,9 +434,38 @@
 			text-align: left
 			padding-left: 12% 
 			
+		.trustSales__mail
+			input[type="submit"]
+				font-size: .95em 
 
 
-	/**/
+
+
+	.steps
+		font-size: .9em 
+		
+		h2
+			font-size: 1.9em 
+			line-height: 1.5 
+			
+		.step
+			margin-top: 50px 
+			.step-text
+				text-align: center
+				&::before
+					width: 30px
+					right: -43px
+					padding-right: 5px 
+			.step-img
+				left: 50%
+				transform: translateX(-50%)
+		.middle-line
+			&::after
+				top: 52% 
+
+					
+
+/**/
 
 
 /* Custom, iPhone Retina */
