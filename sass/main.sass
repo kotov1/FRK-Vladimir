@@ -50,7 +50,7 @@ body
 	overflow-x: hidden
 	opacity: 1
 
-section
+section, footer
 	padding-top: 50px
 	padding-bottom: 50px  
 
@@ -82,10 +82,10 @@ section
 	font-weight: bold
 	
 a[href^="tel"]
-		font: bold 1.375em $default__font-text
-		line-height: 1.4  
-		&:hover
-		color: inherit 
+	font-family: $default__font-heading
+		
+	&:hover
+	color: inherit 
 		
 svg
 	width: 100%
@@ -112,7 +112,7 @@ h4
 
 form
 
-	input
+	input, textarea
 		width: 100%
 		padding: 10px 15px 
 		font-family: $default__font-heading
@@ -140,6 +140,13 @@ form
 			transform: scale(1.02)
 		&:active
 			transform: scale(.98)
+
+		+ span
+			display: block
+			margin-top: 10px
+			font-size: .8em
+			line-height: 1.4
+			text-align: center
 
 
 
@@ -176,6 +183,9 @@ header
 		
 	a[href^="tel"]
 		color: #fff
+		font-size: 1.375em
+		font-weight: bold
+		line-height: 1.4  
 		
 .header__content
 	position: relative
@@ -224,7 +234,6 @@ header
 	padding-bottom: 25px  
 
 	input[type="text"], input[type="tel"]
-		// height: 50px
 		padding-left: 1em  
 		background-color: rgba(255, 255, 255, 1)
 		border: 1px solid rgba(227, 227, 227, .5)
@@ -328,12 +337,10 @@ header
 	
 	.garanty__content
 		h3
-			// font: 2.2em $default__font-heading
 			margin-top: 50px 
 			margin-bottom: 25px 
 			
 		h4, p
-			// font-family: "MarmeladRegular", sans-serif
 			line-height: 1.4  
 // ===================================
 // 	GARANTY END
@@ -347,7 +354,7 @@ header
 	background: url(../img/consult.jpg) no-repeat
 	background-position: 75% 5%
 	background-size: 120%
-	// background-attachment: fixed 
+	background-attachment: fixed 
 	color: rgba(0,0,0,.6)
 	padding-top: 0
 	padding-bottom: 0
@@ -388,18 +395,8 @@ header
 		display: block
 		width: 100%
 		margin-top: 10px 
-		
-		+ span
-			font-size: .75em
-			color: rgba(0,0,0,.8)
-			
-	input[type="submit"]
-		+ span
-			display: block
-			margin-top: 10px
-			font-size: .8em
-			line-height: 1.4
-			text-align: center
+
+
 // ===================================
 // 	CONSULTATION END
 // ===================================
@@ -478,10 +475,7 @@ header
 // PAY FOR RESULT START
 // =================================== 
 .payForResult
-	// background-color: rgba(1,137,255,.2) 
 	background-color: rgba(1,137,255,.1)
-	// background-color: #dce5ec
-	// background: linear-gradient(to right, rgba(1,137,255,.7), rgba(1,137,255,.2))
 
 	h2
 		margin-bottom: 50px 
@@ -628,7 +622,7 @@ header
 	background: #FFF url(../img/meeting.jpg) no-repeat
 	background-size: cover
 	
-	&:before
+	&::before
 		content: ""
 		display: block
 		width: 100%
@@ -727,9 +721,6 @@ header
 				content: ".06" 
 
 
-
-
-
 	.middle-line
 		height: 100%
 		width: 2px
@@ -749,16 +740,200 @@ header
 			border-radius: 50%
 			z-index: 20
 
-
-
-
-
-
-
 // ===================================
 // 	STEPS END
 // ===================================
 
+
+// ===================================
+// 	VALUATION START
+// ===================================
+
+.valuation
+	position: relative
+	background: #fff url(../img/calc.png) no-repeat
+	background-size: cover
+	background-attachment: fixed 
+	
+	&::before
+		content: ""
+		display: block
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+		z-index: 0
+		background-color: rgba(0,0,0,.2)
+		background-origin: padding-box
+		background-clip: padding-box
+	
+
+.valuation-wrap
+	position: relative
+	background: rgba(0,0,0,.4)
+	padding: 5px
+	
+.valuation-border
+	border: 1px solid rgba(1,137,255,.8)
+	
+.valuation-heading
+	padding: 20px 150px 20px 55px
+
+	p
+		font-family: $default__font-heading 	
+		font-size: 1.9em
+		line-height: 1.2
+		letter-spacing: 1px
+		font-weight: normal
+		color: rgba(255,255,255,.7) 
+		span
+			color: rgb(255,255,255) 
+
+.counter-wrap
+	position: absolute
+	bottom: 25px
+	left: 60px
+	
+	p
+		padding-left: 10px
+		font-size: 1.3em
+		color: rgba(255,255,255,.7)  
+
+.valuation__mail
+	padding: 5px
+	background: rgba(0,0,0,.5)
+	// border-radius: 5px
+	border-left: 1px solid rgba(1,137,255,.8)
+
+	
+	.valuation__mail-wrap
+		padding: 20px 25px 10px
+		border-radius: 5px
+	
+	.valuation__mail-head
+		line-height: 1.2
+		color: rgba(255,255,255,.9)
+		p
+			font-family: $default__font-heading 	
+			font-size: 1rem
+
+		span
+			font-size: 1.4rem
+
+	input
+		display: block
+		width: 100%
+		margin-top: 10px
+		background-color: inherit
+		border-color: rgba(255,255,255,.5)
+		
+		&*::-webkit-input-placeholder
+			color: rgba(255,255,255,.9)
+
+		&*:-moz-placeholder
+			color: rgba(255,255,255,.9)
+
+		&*::-moz-placeholder
+			color: rgba(255,255,255,.9)
+
+		&*:-ms-input-placeholder
+			color: rgba(255,255,255,.9)
+
+		
+		+ span
+			color: rgba(255,255,255,.8)
+			
+	input[type="submit"]
+		+ span
+			display: block
+			margin-top: 10px
+
+// ===================================
+// 	VALUATION END
+// ===================================
+
+
+// ===================================
+// 	FOOTER START
+// ===================================
+footer
+	position: relative
+	// background: url(../img/vladimir.jpg) no-repeat
+	// background-size: cover
+	// background-position: center 150% 
+	
+	&::before
+		content: ""
+		display: block
+		position: absolute 
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		z-index: 0
+		background: rgba(255,255,255,.8)
+		
+
+	h2
+		margin-bottom: 50px 
+		font-size: 2.5em 
+		font-weight: normal
+		line-height: 1.2 
+		span
+			font-weight: bold
+			font-size: .9em
+			
+	.footer__mail
+		background: rgba(255,255,255,.9)
+		border-radius: 5px
+	
+		.footer__mail-wrap
+			padding: 20px 25px 10px
+			border: 1px solid $accent
+			border-radius: 5px
+		
+		.footer__mail-head
+			line-height: 1.2
+			p
+				font-size: 1.2rem
+
+			span
+				font-size: 1.4rem
+
+		input
+			display: block
+			width: 100%
+			margin-top: 10px 
+			
+		textarea
+			margin-top: 10px 
+
+.footer__map
+	position: relative
+	
+	.footer__map-descr
+		width: 100%
+		padding: 20px 
+		position: absolute
+		bottom: 0
+		left: 0
+		background: rgba(0,0,0,.7) 
+		font-size: .85em
+		font-family: $default__font-heading 
+		color: rgba(255,255,255,.7)
+		
+		p
+			line-height: 1.2 
+		
+		.address, .email, .tel
+			span, a
+				color: #FFF 
+			
+
+// ===================================
+// 	FOOTER END
+// ===================================
 
 
 

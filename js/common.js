@@ -10,7 +10,7 @@ $(function() {
 	});
 
 	$('#scroller').click(function () {
-		$('body,html').animate({scrollTop: 0}, 500);	//0 - margin-top; 300 - scrolling speed
+		$('body,html').animate({scrollTop: 0}, 1200);	//0 - margin-top; 1200 - scrolling speed
 		 return false;
 		 });	
 	// ------------------------------------------
