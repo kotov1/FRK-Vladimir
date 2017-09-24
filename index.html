@@ -84,11 +84,28 @@ HEADER START
 								</div>
 								
 								<div class="col-xl-4 col-lg-6">
-									<input type="tel" name="Телефон:" placeholder="Телефон*" required>
+									<input type="tel" name="Телефон:" placeholder="Телефон*" pattern="[^A-Za-zА-Яа-яЁё]{5,20}" required>
 									<span>*Должен начинаться на +7</span>
 								</div>
 								<div class="col-xl-3 offset-xl-1 col-lg-6 offset-lg-3">
 									<input type="submit" value="Оценить квартиру">
+
+									<!-- privacy -->
+									<label class="cd-checkbox cd-checkbox--required">
+										<input type="checkbox" checked="" class="cd-hidden" required="" name="Пользовательское соглашение:">
+										<span class="cd-checkbox__pseudo-wr">
+											<span class="cd-checkbox__pseudo">
+												<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+													<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#fff" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+												</svg>
+											</span>
+										</span>
+										<span class="cd-checkbox__text">
+											Я согласен(а) с обработкой персональных данных и <a href="/privacy.html" target="_blank">политикой конфиденциальности</a>
+										</span>
+									</label>
+									<!-- privacy end -->
+
 								</div>
 							</div>
 
@@ -124,37 +141,37 @@ ADVANTAGES START
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-12 center">
-				<h2>Почему выбирают нас</h2>
+				<h2 class="wow fadeInUp">Почему выбирают нас</h2>
 			</div>
 		</div>
 		<div class="advantages__content">
 			<div class="row">
-				<div class="advantages__item col-xl-4 col-lg-6">
+				<div class="advantages__item col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".1s">
 				<div class="svg_container"><img src="img/crown_accent.png" alt="На рынке более 16 лет"></div>
 				<h3>16 лет работы</h3>
 				<p>Компания работает на рынке более 16 лет. Наш опыт позволяет реализовать объекты максимально быстро и на самых выгодных условиях.</p>
 				</div>
-				<div class="advantages__item col-xl-4 col-lg-6">
+				<div class="advantages__item col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".5s">
 					<div class="svg_container"><img src="img/shield_accent.svg" alt="Неразглашение информации"></div>
 					<h3>Конфиденциальность</h3>
 					<p>Наша основная политика - неразглашение личной информации клиента. Никакие персональные данные не попадут третьим лицам.</p>
 				</div>
-				<div class="advantages__item col-xl-4 col-lg-6">
+				<div class="advantages__item col-xl-4 col-lg-6 wow fadeIn" data-wow-delay="1s">
 					<div class="svg_container"><img src="img/rubin_accent.svg" alt="Профессионалы в своем деле"></div>
 					<h3>Профессионализм</h3>
 					<p>Мы владеем новейшими инструментами для привлечения клиентов. и поэтому быстро реализуем даже самые эксклюзивные и дорогостоящие объекты недвижимости.</p>
 				</div>
-				<div class="advantages__item col-xl-4 col-lg-6">
+				<div class="advantages__item col-xl-4 col-lg-6 wow fadeIn" data-wow-delay=".5s">
 					<div class="svg_container"><img src="img/tools_accent.svg" alt="Мультиканальность"></div>
 					<h3><span>Пакетные рекламные инструменты</span></h3>
 					<p>Залог нашего успеха - пакетные решения по продвижению Вашей недвижимости. Мы предпочитаем мультиканальную работу, что позволяет нам находить самых заинтересованных и обеспеченных покупателей.</p>
 				</div>
-				<div class="advantages__item col-xl-4 col-lg-6">
+				<div class="advantages__item col-xl-4 col-lg-6 wow fadeIn" data-wow-delay="1s">
 					<div class="svg_container"><img src="img/wallet_accent.svg" alt="Честность"></div>
 					<h3>Нет скрытых платежей</h3>
 					<p>Мы не берем с вас ни каких денег кроме комиссии от сделки. Более того, команда экспертов инвестирует собственные средства в рекламную кампанию по продаже недвижимости.</p>
 				</div>
-				<div class="advantages__item col-xl-4 col-lg-6">
+				<div class="advantages__item col-xl-4 col-lg-6 wow fadeIn" data-wow-delay="1.5s">
 					<div class="svg_container"><img src="img/ok_accent.svg" alt="Работа без предоплаты"></div>
 					<h3>Работа без предоплаты</h3>
 					<p>Наша команда работает по договору и поэтому мы не требуем ни копейки предоплаты. Наши услуги оплачиваются по факту заключения договора купли-продажи, т.е. после выполнения обязательств с нашей стороны.</p>
@@ -174,17 +191,17 @@ GARANTY START
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-6 center">
-				<div class="garanty__img">
+				<div class="garanty__img wow slideInLeft" data-wow-delay="2s" data-wow-duration=".5s">
 					<img src="img/garanty2.jpg" alt="Гарантия безопасности сделки" class="img-responsive">
 				</div>
 			</div>
 			<div class="col-xl-6">
 				<div class="garanty__content">
-					<h3>Как мы защищаем наших клиентов</h3>
-					<h4>1. Защита от всех проблемных случаев</h4>
-					<p>Важно, чтобы имущество и денежные средства клиента были в безопасности. С этой целью мы внедрили безопасные расчеты и наняли опытных юристов.</p>
-					<h4>2. Только проверенные покупатели</h4>
-					<p>Наша служба безопасности проверяет личность каждого покупателя на долговые обязательства, штрафы, исполнительные производства.</p>
+					<h3 class="wow fadeInUp">Как мы защищаем наших клиентов</h3>
+					<h4 class="wow fadeInRight" data-wow-delay=".5s">1. Защита от всех проблемных случаев</h4>
+					<p class="wow fadeInRight" data-wow-delay=".5s">Важно, чтобы имущество и денежные средства клиента были в безопасности. С этой целью мы внедрили безопасные расчеты и наняли опытных юристов.</p>
+					<h4 class="wow fadeInRight" data-wow-delay="1s">2. Только проверенные покупатели</h4>
+					<p class="wow fadeInRight" data-wow-delay="1s">Наша служба безопасности проверяет личность каждого покупателя на долговые обязательства, штрафы, исполнительные производства.</p>
 				</div>
 			</div>
 		</div>
@@ -202,10 +219,10 @@ CONSULTATION START
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-4 offset-xl-8 col-lg-6 offset-lg-6 col-md-6 offset-md-6">
-				<p class="consult__head"><span class="bold">Отправьте заявку и бесплатно получите</span> полную юридическую консультацию по продаже Вашей недвижимости</p>
+				<p class="consult__head wow zoomIn"><span class="bold">Отправьте заявку и бесплатно получите</span> полную юридическую консультацию по продаже Вашей недвижимости</p>
 				
 				<!-- FORM start -->
-				<form class="mail consult__mail">
+				<form class="mail consult__mail wow zoomIn" data-wow-delay="1s">
 					<div class="consult__mail-wrap">
 						<div class="consult__mail-head">
 							<p><span class="bold">Оставьте заявку</span><br> и получите юридическую консультацию бесплатно:</p>
@@ -218,11 +235,28 @@ CONSULTATION START
 						<!-- END Hidden Required Fields -->
 
 						<input type="text" name="Адрес:" placeholder="Ваш адрес:" required>
-						<input type="tel" name="Телефон:" placeholder="Ваш телефон:" required>
+						<input type="tel" name="Телефон:" placeholder="Ваш телефон:" pattern="[^A-Za-zА-Яа-яЁё]{5,20}" required>
 						<span>*Должен начинаться на +7</span>
 						<input type="text" name="Имя:" placeholder="Ваше имя:">
 
 						<input type="submit" value="Оставить заявку">
+
+						<!-- privacy -->
+						<label class="cd-checkbox cd-checkbox--required">
+							<input type="checkbox" checked="" class="cd-hidden" required="" name="Пользовательское соглашение:">
+							<span class="cd-checkbox__pseudo-wr">
+								<span class="cd-checkbox__pseudo">
+									<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+										<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#fff" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+									</svg>
+								</span>
+							</span>
+							<span class="cd-checkbox__text">
+								Я согласен(а) с обработкой персональных данных и <a href="/privacy.html" target="_blank">политикой конфиденциальности</a>
+							</span>
+						</label>
+						<!-- privacy end -->
+
 						<span class="center">Или позвоните по номеру: <br> +7 (910) 679 88 88</span>
 					</div>
 				</form>
@@ -244,13 +278,13 @@ RESULTS START
 	<div class="container">
 		<div class="row">
 			<div class="col-xl-12">
-				<h2>Наши результаты</h2>
+				<h2 class="wow fadeInUp">Наши результаты</h2>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xl-12">
-				<h3>Факты в цифрах</h3>
-				<p>Лучшие показатели</p>
+				<h3 class="wow fadeInUp">Факты в цифрах</h3>
+				<p class="wow fadeInUp">Лучшие показатели</p>
 			</div>
 		</div>
 
@@ -258,7 +292,7 @@ RESULTS START
 			<div class="row">
 
 				<div class="col-lg-6 col-md-12">
-					<div class="gallery_item gallery_item-families">
+					<div class="gallery_item gallery_item-families wow fadeInLeft">
 						<p class="gallery_text"><span class="stylized_number">1950</span> семей получили ключи в <span class="stylized_number">2017</span> году</p>
 					</div>
 				</div>
@@ -266,13 +300,13 @@ RESULTS START
 				<div class="results__gallery-rightbar col-lg-6 col-md-12">
 					<div class="row">
 						<div class="col-sm-6">
-							<div class="gallery_item gallery_item-experience">
+							<div class="gallery_item gallery_item-experience wow fadeInRight" data-wow-delay=".25s">
 								<p class="gallery_text"><span class="stylized_number">16</span> лет работы в риэлторском бизнесе</p>
 							</div>
 						</div>
 
 						<div class="col-sm-6">
-							<div class="gallery_item gallery_item-countries">
+							<div class="gallery_item gallery_item-countries wow fadeInRight" data-wow-delay=".5s">
 								<p class="gallery_text"><span class="stylized_number">4</span><br> страны, теперь и в Европе</p>
 							</div>
 						</div>
@@ -280,12 +314,12 @@ RESULTS START
 
 					<div class="row">
 						<div class="col-sm-6">
-							<div class="gallery_item gallery_item-cities">
+							<div class="gallery_item gallery_item-cities wow fadeInRight" data-wow-delay=".75s">
 								<p class="gallery_text"><span class="stylized_number">60</span> городов присутствия</p>
 							</div>
 						</div>
 
-						<div class="col-sm-6">
+						<div class="col-sm-6 wow fadeInRight" data-wow-delay="1s">
 							<div class="gallery_item gallery_item-specialists">
 								<p class="gallery_text">более <span class="stylized_number">5000</span> специалистов по всей сети</p>
 							</div>
@@ -310,13 +344,13 @@ PAY FOR RESULT START
 
 		<div class="row">
 			<div class="col-12">
-				<h2>Платите только за результат</h2>
+				<h2 class="wow fadeInUp">Платите только за результат</h2>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-lg-3 col-md-6">
-				<div class="payForResult__item">
+				<div class="payForResult__item wow fadeInDown" data-wow-delay=".3s">
 					<div class="svg_wrap"><?xml version="1.0" encoding="iso-8859-1"?>
 					<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 						 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
@@ -350,7 +384,7 @@ PAY FOR RESULT START
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
-				<div class="payForResult__item">
+				<div class="payForResult__item wow fadeInUp" data-wow-delay=".6s">
 					<div class="svg_wrap">
 						<?xml version="1.0" encoding="iso-8859-1"?>
 						<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -379,7 +413,7 @@ PAY FOR RESULT START
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
-				<div class="payForResult__item">
+				<div class="payForResult__item wow fadeInDown" data-wow-delay=".9s">
 					<div class="svg_wrap">
 						<?xml version="1.0" encoding="iso-8859-1"?>
 						<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -417,7 +451,7 @@ PAY FOR RESULT START
 				</div>
 			</div>
 			<div class="col-lg-3 col-md-6">
-				<div class="payForResult__item">
+				<div class="payForResult__item wow fadeInUp" data-wow-delay="1.2s">
 					<div class="svg_wrap">
 						<?xml version='1.0' encoding='iso-8859-1'?>
 						<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
@@ -435,7 +469,7 @@ PAY FOR RESULT START
 		</div>
 		<div class="row">
 			<div class="col-12">
-				<h3>10% скидка на услуги риелтора при одновременной продаже и покупке!</h3>
+				<h3 class="wow bounceInUp" data-wow-delay="1.5s">10% скидка на услуги риелтора при одновременной продаже и покупке!</h3>
 			</div>
 		</div>
 	</div>
@@ -445,13 +479,13 @@ PAY FOR RESULT END
 =================================== -->
 
 <!-- ===================================
-PAY FOR RESULT END
+TRUST_SALES START
 =================================== -->
 <section class="trustSales">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<h2>Доверьте продажу квартиры профессионалам</h2>
+				<h2 class="wow fadeInUp">Доверьте продажу квартиры профессионалам</h2>
 			</div>
 		</div>
 			<div class="row">
@@ -467,7 +501,7 @@ PAY FOR RESULT END
 
 						<div class="row">
 							<div class="col-xl-4 col-lg-6">
-								<input type="tel" name="Телефон:" placeholder="Ваш телефон:" required>
+								<input type="tel" name="Телефон:" placeholder="Ваш телефон:" pattern="[^A-Za-zА-Яа-яЁё]{5,20}" required>
 								<span>*Должен начинаться на +7</span>
 							</div>
 							
@@ -475,10 +509,24 @@ PAY FOR RESULT END
 								<input type="text" name="Имя:" placeholder="Ваше имя:">
 							</div>
 							<div class="col-xl-4 offset-xl-0 col-lg-6 offset-lg-3">
-								<div class="submit-wrap"> <!-- for positioning the long placeholder -->
 									<input type="submit" value="Доверить продажу профессионалам">
-									<!-- <div class="submit-placeholder">Доверить продажу профессионалам</div> --> <!-- custom long placeholder -->
-								</div>
+
+									<!-- privacy -->
+									<label class="cd-checkbox cd-checkbox--required">
+										<input type="checkbox" checked="" class="cd-hidden" required="" name="Пользовательское соглашение:">
+										<span class="cd-checkbox__pseudo-wr">
+											<span class="cd-checkbox__pseudo">
+												<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+													<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#fff" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+												</svg>
+											</span>
+										</span>
+										<span class="cd-checkbox__text">
+											Я согласен(а) с обработкой персональных данных и <a href="/privacy.html" target="_blank">политикой конфиденциальности</a>
+										</span>
+									</label>
+									<!-- privacy end -->
+
 							</div>
 						</div>
 
@@ -490,7 +538,7 @@ PAY FOR RESULT END
 	</div>
 </section>
 <!-- ===================================
-PAY FOR RESULT END
+TRUST_SALES END
 =================================== -->
 
 <!-- ===================================
@@ -500,7 +548,7 @@ COMMENTS START
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<h2>Отзывы клиентов</h2>
+				<h2 class="wow fadeInUp">Отзывы клиентов</h2>
 			</div>
 		</div>
 		
@@ -533,6 +581,11 @@ COMMENTS START
 			</div>
 
 		</div>
+		<div class="container">
+			<div class="row">
+				<div class="col-12 center"><button class="btn">Стать нашим клиентом</button></div>
+			</div>
+		</div>
 
 	</div>
 </section>
@@ -547,28 +600,28 @@ STEPS END
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<h2>Схема успешной продажи Вашей квартиры</h2>
+				<h2 class="wow fadeInUp">Схема успешной продажи Вашей квартиры</h2>
 			</div>
 		</div>
 
 		<!-- step 1 -->
 		<div class="row">
 			<div class="offset-lg-2 col-lg-3 offset-md-0 col-md-5 col-sm-7 offset-sm-1 offset-0 col-10">
-				<div class="step step-1">
+				<div class="step step-1 wow fadeInLeft" data-wow-delay=".2s">
 					<div class="img-wrap">
 						<div class="step-img img-responsive"></div>
 					</div>
 					<p class="step-text">Вы оставляете заявку на консультацию</p>
 				</div>
 			</div>
-			<div class="col-2"><div class="middle-line"></div></div>
+			<div class="col-2"><div class="middle-line wow bounceInRight" data-wow-delay=".2s"></div></div>
 		</div>
 
 		<!-- step 2 -->
 		<div class="row">
-			<div class="col-2 offset-md-5 push-md-0 offset-sm-0 push-sm-6 offset-sm-2 offset-0 push-10"><div class="middle-line"></div></div>
+			<div class="col-2 offset-md-5 push-md-0 offset-sm-0 push-sm-6 offset-sm-2 offset-0 push-10"><div class="middle-line wow bounceInLeft" data-wow-delay=".4s"></div></div>
 			<div class="col-lg-3 col-md-5 pull-md-0 col-sm-7 pull-sm-3 col-10 pull-2">
-				<div class="step step-2">
+				<div class="step step-2 wow fadeInRight" data-wow-delay=".4s">
 					<div class="step-img"></div>
 					<p class="step-text">Эксперт выезжает на объект и проводит его тщательный анализ</p>
 				</div>
@@ -578,19 +631,19 @@ STEPS END
 		<!-- step 3 -->
 		<div class="row">
 			<div class="offset-lg-2 col-lg-3 offset-md-0 col-md-5 col-sm-7 offset-sm-1 offset-0 col-10">
-				<div class="step step-3">
+				<div class="step step-3 wow fadeInLeft" data-wow-delay=".6s">
 					<div class="step-img"></div>
 					<p class="step-text">Согласовываем цену и подписываем договор о сотрудничестве</p>
 				</div>
 			</div> 
-			<div class="col-2"><div class="middle-line"></div></div>
+			<div class="col-2"><div class="middle-line wow bounceInRight" data-wow-delay=".6s"></div></div>
 		</div>
 
 		<!-- step 4 -->
 		<div class="row">
-			<div class="col-2 offset-md-5 push-md-0 offset-sm-0 push-sm-6 offset-sm-2 offset-0 push-10"><div class="middle-line"></div></div>
+			<div class="col-2 offset-md-5 push-md-0 offset-sm-0 push-sm-6 offset-sm-2 offset-0 push-10"><div class="middle-line wow bounceInRight" data-wow-delay=".8s"></div></div>
 			<div class="col-lg-3 col-md-5 pull-md-0 col-sm-7 pull-sm-3 col-10 pull-2">
-				<div class="step step-4">
+				<div class="step step-4 wow fadeInRight" data-wow-delay=".8s">
 					<div class="step-img"></div>
 					<p class="step-text">Проводим многоканальную рекламную компанию</p>
 				</div>
@@ -600,19 +653,19 @@ STEPS END
 		<!-- step 5 -->
 		<div class="row">
 			<div class="offset-lg-2 col-lg-3 offset-md-0 col-md-5 col-sm-7 offset-sm-1 offset-0 col-10">
-				<div class="step step-5">
+				<div class="step step-5 wow fadeInLeft" data-wow-delay="1s">
 					<div class="step-img"></div>
 					<p class="step-text">Берем на себя организацию просмотров и ведение переговоров</p>
 				</div>
 			</div> 
-			<div class="col-2"><div class="middle-line"></div></div>
+			<div class="col-2"><div class="middle-line wow bounceInRight" data-wow-delay="1s"></div></div>
 		</div>
 
 		<!-- step 6 -->
 		<div class="row">
-			<div class="col-2 offset-md-5 push-md-0 offset-sm-0 push-sm-6 offset-sm-2 offset-0 push-10"><div class="middle-line"></div></div>
+			<div class="col-2 offset-md-5 push-md-0 offset-sm-0 push-sm-6 offset-sm-2 offset-0 push-10"><div class="middle-line wow bounceInRight" data-wow-delay="1.2s"></div></div>
 			<div class="col-lg-3 col-md-5 pull-md-0 col-sm-7 pull-sm-3 col-10 pull-2">
-				<div class="step step-6">
+				<div class="step step-6 wow fadeInRight" data-wow-delay="1.2s">
 					<div class="step-img"></div>
 					<p class="step-text">После Вашего согласия самостоятельно готовим документы</p>
 				</div>
@@ -622,12 +675,12 @@ STEPS END
 		<!-- step 7 -->
 		<div class="row">
 			<div class="offset-lg-2 col-lg-3 offset-md-0 col-md-5 col-sm-7 offset-sm-1 offset-0 col-10">
-				<div class="step step-7">
+				<div class="step step-7 wow fadeInLeft" data-wow-delay="1.4s">
 					<div class="step-img"></div>
 					<p class="step-text">Закрываем сделку на максимально выгодных для Вас условиях</p>
 				</div>
 			</div> 
-			<div class="col-2"><div class="middle-line"></div></div>
+			<div class="col-2"><div class="middle-line wow bounceInRight" data-wow-delay="1.4s"></div></div>
 		</div>
 
 	</div>
@@ -650,11 +703,11 @@ STEPS END
 					<div class="col-lg-8">
 
 						<div class="valuation-heading">
-							<p><span class="bold">Бесплатно получите быструю оценку Вашей недвижимости</span> и узнайте, сколько времени потребуется для ее реализации</p>
+							<p class="wow fadeInLeft"><span class="bold">Бесплатно получите быструю оценку Вашей недвижимости</span> и узнайте, сколько времени потребуется для ее реализации</p>
 						</div>
-						<div class="counter-wrap">
+						<div class="counter-wrap wow fadeInUp">
 							<p>Предложение действительно еще:</p>
-							<script>(function(){var _id="7a78994cf0a28799c1a3a8f5cbd953af";while(document.getElementById("timer"+_id))_id=_id+"0";document.write("<div id='timer"+_id+"' style='min-width:467px;height:100px;'></div>");var _t=document.createElement("script");_t.src="http://megatimer.ru/timer/timer.min.js";var _f=function(_k){var l=new MegaTimer(_id, {"view":[1,1,1,1],"type":{"currentType":"2","params":{"startByFirst":true,"days":"2","hours":"12","minutes":"27","utc":27}},"design":{"type":"plate","params":{"round":"3","background":"","background-color":"rgba(0,0,0,.6)","effect":"none","space":"0","separator-margin":"5","number-font-family":{"family":"Poiret One","link":"<link href='http://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>"},"number-font-size":"60","number-font-color":"rgb(1,137,255)","padding":"4","separator-on":false,"separator-text":"","text-on":true,"text-font-family":{"family":"Roboto","link":"<link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>"},"text-font-size":"12","text-font-color":"rgba(255,255,255,.7)"}},"designId":2,"theme":"black","width":467,"height":82});if(_k!=null)l.run();};_t.onload=_f;_t.onreadystatechange=function(){if(_t.readyState=="loaded")_f(1);};var _h=document.head||document.getElementsByTagName("head")[0];_h.appendChild(_t);}).call(this);</script>
+							<script async>(function(){var _id="7a78994cf0a28799c1a3a8f5cbd953af";while(document.getElementById("timer"+_id))_id=_id+"0";document.write("<div id='timer"+_id+"' style='min-width:467px;height:100px;'></div>");var _t=document.createElement("script");_t.src="http://megatimer.ru/timer/timer.min.js";var _f=function(_k){var l=new MegaTimer(_id, {"view":[1,1,1,1],"type":{"currentType":"2","params":{"startByFirst":true,"days":"2","hours":"12","minutes":"27","utc":27}},"design":{"type":"plate","params":{"round":"3","background":"","background-color":"rgba(0,0,0,.6)","effect":"none","space":"0","separator-margin":"5","number-font-family":{"family":"Poiret One","link":"<link href='http://fonts.googleapis.com/css?family=Poiret+One&subset=latin,cyrillic' rel='stylesheet' type='text/css'>"},"number-font-size":"60","number-font-color":"rgb(1,137,255)","padding":"4","separator-on":false,"separator-text":"","text-on":true,"text-font-family":{"family":"Roboto","link":"<link href='http://fonts.googleapis.com/css?family=Roboto&subset=latin,cyrillic' rel='stylesheet' type='text/css'>"},"text-font-size":"12","text-font-color":"rgba(255,255,255,.7)"}},"designId":2,"theme":"black","width":467,"height":82});if(_k!=null)l.run();};_t.onload=_f;_t.onreadystatechange=function(){if(_t.readyState=="loaded")_f(1);};var _h=document.head||document.getElementsByTagName("head")[0];_h.appendChild(_t);}).call(this);</script>
 						</div>
 
 					</div>
@@ -662,7 +715,7 @@ STEPS END
 					<div class="col-lg-4">
 					
 						<!-- FORM start -->
-						<form class="mail valuation__mail">
+						<form class="mail valuation__mail wow zoomIn">
 							<div class="valuation__mail-wrap">
 								<div class="valuation__mail-head">
 									<p><span class="bold">Оставьте заявку</span><br> и узнайте рыночную стоимость и предположительное время продажи Вашего объекта совершенно бесплатно:</p>
@@ -675,11 +728,28 @@ STEPS END
 								<!-- END Hidden Required Fields -->
 					
 								<input type="text" name="Адрес:" placeholder="Ваш адрес:" required>
-								<input type="tel" name="Телефон:" placeholder="Ваш телефон:" required>
+								<input type="tel" name="Телефон:" placeholder="Ваш телефон:" pattern="[^A-Za-zА-Яа-яЁё]{5,20}" required>
 								<span>*Должен начинаться на +7</span>
 								<input type="text" name="Имя:" placeholder="Ваше имя:">
 					
 								<input type="submit" value="Оставить заявку">
+
+								<!-- privacy -->
+								<label class="cd-checkbox cd-checkbox--required">
+									<input type="checkbox" checked="" class="cd-hidden" required="" name="Пользовательское соглашение:">
+									<span class="cd-checkbox__pseudo-wr">
+										<span class="cd-checkbox__pseudo">
+											<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+												<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#fff" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+											</svg>
+										</span>
+									</span>
+									<span class="cd-checkbox__text">
+										Я согласен(а) с обработкой персональных данных и <a href="/privacy.html" target="_blank">политикой конфиденциальности</a>
+									</span>
+								</label>
+								<!-- privacy end -->
+
 								<span class="center">Или позвоните по номеру: <br> +7 (910) 679 88 88</span>
 							</div>
 						</form>
@@ -703,14 +773,14 @@ STEPS END
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<h2>Свяжитесь с нами<br> <span>любым удобным для Вас способом</span></h2>
+				<h2 class="wow fadeInUp">Свяжитесь с нами<br> <span>любым удобным для Вас способом</span></h2>
 			</div>
 		</div>
 
 		<div class="row">
 			<div class="col-xl-6 offset-lg-1 col-lg-10 offset-md-0 col-md-12">
-				<div class="footer__map">
-					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa3a63f11a3accf31a4d2aad7def6a62366e50f13832d6320d190d86fbd39595d&amp;width=100%&amp;height=502&amp;lang=ru_UA&amp;scroll=true"></script>
+				<div class="footer__map wow zoomIn" data-wow-delay="1s">
+					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa3a63f11a3accf31a4d2aad7def6a62366e50f13832d6320d190d86fbd39595d&amp;width=100%&amp;height=502&amp;lang=ru_UA&amp;scroll=false" async></script>
 					<div class="footer__map-descr">
 						<p class="address">
 							Наш адрес: <br>
@@ -731,7 +801,7 @@ STEPS END
 			<div class="offset-xl-0 col-xl-4 col-lg-10 offset-lg-1 col-md-12 offset-md-0">
 
 				<!-- FORM start -->
-				<form class="mail footer__mail">
+				<form class="mail footer__mail wow zoomIn" data-wow-delay="1.5s">
 					<div class="footer__mail-wrap">
 						<div class="footer__mail-head">
 							<p><span class="bold">Оставьте заявку</span><br> и получите юридическую консультацию бесплатно:</p>
@@ -744,12 +814,29 @@ STEPS END
 						<!-- END Hidden Required Fields -->
 
 						<input type="text" name="Адрес:" placeholder="Ваш адрес:" required>
-						<input type="tel" name="Телефон:" placeholder="Ваш телефон:" required>
+						<input type="tel" name="Телефон:" placeholder="Ваш телефон:" pattern="[^A-Za-zА-Яа-яЁё]{5,20}" required>
 						<span>*Должен начинаться на +7</span>
 						<input type="text" name="Имя:" placeholder="Ваше имя:">
 						<textarea name="Вопрос:" placeholder="Ваш вопрос:"></textarea>
 
 						<input type="submit" value="Оставить заявку">
+
+						<!-- privacy -->
+						<label class="cd-checkbox cd-checkbox--required">
+							<input type="checkbox" checked="" class="cd-hidden" required="" name="Пользовательское соглашение:">
+							<span class="cd-checkbox__pseudo-wr">
+								<span class="cd-checkbox__pseudo">
+									<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+										<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#fff" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+									</svg>
+								</span>
+							</span>
+							<span class="cd-checkbox__text">
+								Я согласен(а) с обработкой персональных данных и <a href="/privacy.html" target="_blank">политикой конфиденциальности</a>
+							</span>
+						</label>
+						<!-- privacy end -->
+
 						<span class="center">Или позвоните по номеру: <br> +7 (910) 679 88 88</span>
 					</div>
 				</form>
@@ -765,13 +852,79 @@ STEPS END
 	<!-- FOOTER END -->
 <!-- =================================== -->
 
+<div class="hidden">
+	<form class="mail hidden__mail" id="callback">
+		<div class="hidden__mail-wrap">
+			<div class="hidden__mail-head">
+				<p><span class="bold">Оставьте заявку</span><br> и получите юридическую консультацию бесплатно:</p>
+			</div>
+
+			<!-- Hidden Required Fields -->
+			<input type="hidden" name="project_name" value="Prodaga kvartir Vladimir">
+			<input type="hidden" name="admin_email" value="kotov0991@gmail.com">
+			<input type="hidden" name="form_subject" value="Form Subject">
+			<!-- END Hidden Required Fields -->
+
+
+			<input type="tel" name="Телефон:" placeholder="Ваш телефон:" pattern="[^A-Za-zА-Яа-яЁё]{5,20}" required>
+			<span>*Должен начинаться на +7</span>
+			<input type="text" name="Имя:" placeholder="Ваше имя:">
+
+			<input type="submit" value="Оставить заявку">
+
+			<!-- privacy -->
+			<label class="cd-checkbox cd-checkbox--required">
+				<input type="checkbox" checked="" class="cd-hidden" required="" name="Пользовательское соглашение:">
+				<span class="cd-checkbox__pseudo-wr">
+					<span class="cd-checkbox__pseudo">
+						<svg class="cd-checkbox__check" xmlns="http://www.w3.org/2000/svg" version="1.1" width="14.5" height="11.5" viewBox="0 0 14.5 11.5">
+							<path d="M20 7L12 16L8 12" fill-opacity="0" fill="#fff" stroke-linejoin="round" stroke-linecap="round" stroke-opacity="1" stroke="#fff" stroke-miterlimit="50" stroke-width="2.5" transform="matrix(1,0,0,1,-6.75,-5.75)"></path>
+						</svg>
+					</span>
+				</span>
+				<span class="cd-checkbox__text">
+					Я согласен(а) с обработкой персональных данных и <a href="/privacy.html" target="_blank">политикой конфиденциальности</a>
+				</span>
+			</label>
+			<!-- privacy end -->
+
+			<span class="center">Или позвоните по номеру: <br> +7 (910) 679 88 88</span>
+		</div>
+	</form>
+</div>
+
+
+
+
 	
 <link rel="stylesheet" href="css/main.min.css">
 <script src="js/scripts.min.js"></script>
 
+<script>
+
+	wow = new WOW(
+		{
+		offset:       50,          // default
+		mobile:       false,       // default
+	}
+	)
+
+	wow.init();
+
+</script>
+
+<script>SmoothScroll({
+
+	animationTime: 550,
+	stepSize: 70,
+
+})</script>
 <!-- Created by Petr Petukhov -->
 <!-- Freelance web developer -->
 <!-- petrpetukhov01@gmail.com -->
 
 </body>
 </html>
+
+
+

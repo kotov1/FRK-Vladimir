@@ -15,6 +15,7 @@ $(function() {
 		 });	
 	// ------------------------------------------
 
+
 		//Карусель в блоке comments
 	$(".owl-carousel").owlCarousel({
 		items: 1,
@@ -26,9 +27,15 @@ $(function() {
 	});
 
 
-
-
-
+	//попап окно с формой обратной связи
+	$('button').magnificPopup({
+		// closeBtnInside: true,
+		items: {
+				src: $('#callback'),
+				type: 'inline'
+		},
+		mainClass: 'mfp-forms'
+	});
 
 
 	// E-mail Ajax Send

@@ -75,12 +75,16 @@ section, footer
 		transform: scale(.98)
 
 
-
+.hidden
+	display: none
+	
 .center
 	text-align: center
+	
 .bold
 	font-weight: bold
 	
+
 a[href^="tel"]
 	font-family: $default__font-heading
 		
@@ -118,12 +122,26 @@ form
 		font-family: $default__font-heading
 		border: 1px solid $accent
 		border-radius: 4px;
-
 		outline: none
 		
 		+ span
 			font-size: .75em
 			color: rgba(0,0,0,.8)
+			
+		&:focus
+			box-shadow: inset 1px 1px 10px rgba(0,0,0,.2)
+			
+			&*::-webkit-input-placeholder
+				color: transparent
+
+			&*:-moz-placeholder
+				color: transparent
+
+			&*::-moz-placeholder
+				color: transparent
+
+			&*:-ms-input-placeholder
+				color: transparent
 		
 	input[type="submit"]
 		padding: 11px 30px
@@ -141,7 +159,7 @@ form
 		&:active
 			transform: scale(.98)
 
-		+ span
+		~ span
 			display: block
 			margin-top: 10px
 			font-size: .8em
@@ -543,6 +561,9 @@ header
 .comments
 	h2
 		margin-bottom: 30px 
+	
+	button
+		margin-top: 30px 
 
 .owl-carousel
 	.img-wrap
@@ -607,6 +628,7 @@ header
 					opacity: 1
 					transform: translate3d(0, 0, 0)
 					transition: all .7s ease .7s
+	
 // ===================================
 // 	COMMENTS END
 // ===================================
@@ -803,7 +825,6 @@ header
 .valuation__mail
 	padding: 5px
 	background: rgba(0,0,0,.5)
-	// border-radius: 5px
 	border-left: 1px solid rgba(1,137,255,.8)
 
 	
@@ -827,25 +848,29 @@ header
 		margin-top: 10px
 		background-color: inherit
 		border-color: rgba(255,255,255,.5)
+		color: rgba(255,255,255,.9) !important
+		
+		&:focus
+			box-shadow: inset 1px 1px 10px rgba(255,255,255,.2)
 		
 		&*::-webkit-input-placeholder
-			color: rgba(255,255,255,.9)
+			color: rgba(255,255,255,.7)
 
 		&*:-moz-placeholder
-			color: rgba(255,255,255,.9)
+			color: rgba(255,255,255,.7)
 
 		&*::-moz-placeholder
-			color: rgba(255,255,255,.9)
+			color: rgba(255,255,255,.7)
 
 		&*:-ms-input-placeholder
-			color: rgba(255,255,255,.9)
+			color: rgba(255,255,255,.7)
 
 		
-		+ span
+		~ span
 			color: rgba(255,255,255,.8)
 			
 	input[type="submit"]
-		+ span
+		~ span
 			display: block
 			margin-top: 10px
 
@@ -859,9 +884,6 @@ header
 // ===================================
 footer
 	position: relative
-	// background: url(../img/vladimir.jpg) no-repeat
-	// background-size: cover
-	// background-position: center 150% 
 	
 	&::before
 		content: ""
@@ -930,10 +952,159 @@ footer
 			span, a
 				color: #FFF 
 			
-
 // ===================================
 // 	FOOTER END
 // ===================================
+
+#callback
+	max-width: 400px
+	margin: 0 auto
+	position: relative
+
+.mfp-forms
+	.mfp-close
+		// display: none
+	&.mfp-bg
+		opacity: 0
+		transition: all 0.15s ease-out
+	&.mfp-ready
+		opacity: 0.9
+	&.mfp-removing
+		opacity: 0
+	&.mfp-wrap
+		.mfp-content
+			opacity: 0
+			transition: all 0.15s ease-out
+		&.mfp-ready .mfp-content
+			opacity: 1
+		&.mfp-removing .mfp-content
+			opacity: 0
+
+	.hidden__mail
+		background: rgba(255,255,255,.95)
+		border-radius: 5px
+	
+		.hidden__mail-wrap
+			padding: 20px 25px 10px
+			border: 1px solid $accent
+			border-radius: 5px
+		
+		.hidden__mail-head
+			line-height: 1.2
+			p
+				font-size: 1.2rem
+
+			span
+				font-size: 1.4rem
+
+		input
+			display: block
+			width: 100%
+			margin-top: 15px 
+
+
+.cd-checkbox 
+	margin-top: 7px 
+	cursor: pointer
+	vertical-align: top
+	font-size: 0
+
+	.cd-hidden 
+		display: none
+
+
+	.cd-checkbox__pseudo-wr 
+		display: inline-block
+		vertical-align: middle
+		width: 26px
+		height: 26px
+		box-sizing: border-box
+		padding: 3px
+		-webkit-box-flex: 0
+		-ms-flex: 0 0 26px
+		flex: 0 0 26px
+
+
+	input:not(:checked)
+		+ .cd-checkbox__pseudo-wr 
+			.cd-checkbox__pseudo 
+				-webkit-box-shadow: 0 1px 2px #ffc0ba
+				box-shadow: 0 1px 2px #ffc0ba
+				border-color: #ed8f8f
+				background-color: #fff4eb
+
+
+	.cd-checkbox__pseudo 
+		display: inline-block
+		width: 100%
+		height: 100%
+		border-radius: 4px
+		border: 2px solid #c2c2c2
+		box-sizing: border-box
+		background-color: #fff
+		position: relative
+		-webkit-transition: background .2s ease-out,border .2s ease-out
+		transition: background .2s ease-out,border .2s ease-out
+
+	.cd-checkbox__check 
+		position: absolute
+		top: 1px
+		left: 1px
+		stroke: #fff
+		stroke-dasharray: 19px
+		stroke-dashoffset: 19px
+		-webkit-transition: .2s ease-out
+		transition: .2s ease-out
+
+	.cd-checkbox__text 
+		// display: inline-block
+		vertical-align: middle
+		color: #fff
+		font-size: 11px
+		font-weight: 500
+		line-height: 1.4
+		// margin-left: 3px
+
+		a 
+			color: inherit
+			text-decoration: underline
+
+.cd-checkbox 
+	input[type=checkbox]
+		&:checked
+			+ .cd-checkbox__pseudo-wr 
+				.cd-checkbox__pseudo 
+					.cd-checkbox__check 
+						stroke-dashoffset: 38px
+
+
+.cd-checkbox 
+	input[type=checkbox]
+		&:checked
+			+ .cd-checkbox__pseudo-wr 
+				.cd-checkbox__pseudo 
+					background-color: #13ab41
+					border-color: #13ab41
+
+
+.cd-checkbox
+	&:hover 
+		.cd-checkbox__text 
+			color: #199b40
+
+
+
+.consult__mail, .trustSales__mail, .footer__mail, .hidden__mail
+	.cd-checkbox__text 
+		color: #666 
+
+
+.hidden__mail
+	.cd-hidden
+		display: none !important
+
+
+
 
 
 
